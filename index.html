@@ -1,326 +1,355 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CU Boulder Sounding Rocket Lab (SRL) — 2020–2022</title>
-  <link rel="icon" type="image/x-icon" href="tabicon.ico">
+  <title>CU Boulder Sounding Rocket Lab – SRL Work (2020–2022)</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
   <link rel="stylesheet" href="styles.css"/>
-  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
+  <style>html{scroll-behavior:smooth;}</style>
 </head>
 <body>
-  <!-- Top Nav (optional back link) -->
-  <nav class="site-nav">
-    <div class="container nav-inner">
-      <a href="../" class="brand">
-        <img src="tabicon.ico" alt="" class="brand-mark">
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="https://jack-huston.github.io/#projects" class="nav-back-btn">
+        <i data-lucide="arrow-left"></i>
         <span>Back to Portfolio</span>
       </a>
-      <ul class="nav-links">
-        <li><a href="#about"><span>About</span></a></li>
-        <li><a href="#solid"><span>Solid Motor</span></a></li>
-        <li><a href="#liquid"><span>Liquid Engine</span></a></li>
-        <li><a href="#gallery"><span>Gallery</span></a></li>
-      </ul>
+      <div class="nav-brand">
+        <i data-lucide="rocket" class="icon-nav"></i>
+        <span class="brand-name">Jack Huston</span>
+      </div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+        <i data-lucide="menu" id="menuIcon"></i>
+        <i data-lucide="x" id="closeIcon" style="display:none;"></i>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a href="#overview" class="nav-link">Overview</a>
+        <a href="#solid" class="nav-link">Solid Motor Story</a>
+        <a href="#liquid" class="nav-link">Liquid Engine</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+      </div>
     </div>
   </nav>
 
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#overview" class="mobile-link">Overview</a>
+    <a href="#solid" class="mobile-link">Solid Motor Story</a>
+    <a href="#liquid" class="mobile-link">Liquid Engine</a>
+    <a href="#gallery" class="mobile-link">Gallery</a>
+  </div>
+
   <!-- Hero -->
-  <header id="about" class="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <h1>CU Boulder Sounding Rocket Lab</h1>
-        <p class="hero-subtitle">Role: Integration & Test • Propulsion • Tooling • 2020–2022</p>
-        <p class="hero-blurb">
-          Hands-on contributions across <strong>solid rocket motor</strong> assembly/integration and 
-          <strong>LOX/RP-1 liquid engine</strong> stand development. Responsibilities spanned build and checkout, 
-          sensor installation, manufacturing tooling, electronics, and on-stand testing.
-        </p>
-        <div class="hero-actions">
-          <!-- Update href to your sensor page path if different -->
-          <a href="https://jack-huston.github.io/Propellant-Level-Sensor" class="btn">
-            <i data-lucide="gauge"></i>
-            <span>Propellant Level Sensor Project</span>
-            <i data-lucide="arrow-right"></i>
-          </a>
-          <a href="#solid" class="btn btn-ghost">
-            <i data-lucide="flame"></i>
-            <span>Skip to Solid Motor</span>
-          </a>
-        </div>
+  <section class="project-hero">
+    <div class="project-hero-content">
+      <div class="project-badge">
+        <i data-lucide="flame"></i>
+        <span>Propulsion Integration &amp; Test</span>
       </div>
-      <div class="hero-art">
-        <!-- Replace the src with a favorite SRL banner shot -->
-        <img src="images/srl-hero.jpg" alt="SRL team and hardware">
+      <h1 class="project-hero-title">CU Boulder – Sounding Rocket Lab</h1>
+      <p class="project-hero-subtitle">
+        Hands-on propulsion work across a student-built solid rocket motor and a liquid engine test stand. Roles included assembly, integration, electronics, sensor installation, and test operations.
+      </p>
+      <div class="project-meta">
+        <div class="meta-item"><i data-lucide="calendar"></i><span>2020–2022</span></div>
+        <div class="meta-item"><i data-lucide="users"></i><span>SRL Team</span></div>
+        <div class="meta-item"><i data-lucide="wrench"></i><span>I&amp;T, Build, Test</span></div>
       </div>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <!-- Solid Motor Section -->
-    <section id="solid" class="section">
-      <div class="container">
-        <div class="section-head">
-          <div class="badge">
-            <i data-lucide="flame"></i>
-            <span>Solid Rocket Motor — R Class</span>
-          </div>
-          <h2>Build, Assembly & Test</h2>
-          <p class="section-intro">
-            I supported integration and test activities for an R-class solid motor, including installation on a test stand 
-            for proof pressure operations and field firings. This portion of the work is primarily a <em>show-and-tell</em> story.
-          </p>
+  <!-- Overview -->
+  <section id="overview" class="section section-white">
+    <div class="container">
+      <h2 class="section-title">Project Overview</h2>
+
+      <div class="overview-grid">
+        <div class="overview-image-container">
+          <!-- Replace with your best banner/test-stand image -->
+          <img src="images/overview-test-stand.jpg" alt="SRL liquid engine test stand assembled on the field" class="overview-image" loading="lazy"/>
+          <div class="image-caption">Liquid engine test stand assembled with visible injector and plumbing</div>
+
+          <!-- Optional: short looping clip (e.g., water flow test) -->
+          <video class="overview-image" playsinline muted loop autoplay poster="images/injector-flow-cover.jpg" style="margin-top:1rem;border-radius:1rem;">
+            <source src="videos/injector-water-flow.mp4" type="video/mp4"/>
+          </video>
+          <div class="image-caption">Injector water flow test – pattern development and plumbing checkout</div>
         </div>
 
-        <!-- Story Row -->
-        <div class="story-grid">
-          <!-- Card 1 -->
-          <article class="story-card">
-            <div class="story-image">
-              <!-- Replace with your photo -->
-              <img src="images/solid-stand-install.jpg" alt="Installing motor on test stand">
-            </div>
-            <div class="story-content">
-              <h3>
-                <i data-lucide="wrench"></i>
-                <span>Stand Install & Proof Pressure</span>
-              </h3>
-              <p>
-                Assisted with mechanical installation, hardware verification, and safety checks prior to proof pressure testing.
-              </p>
-              <ul class="story-bullets">
-                <li>Hardware fit-up and fastener checks</li>
-                <li>Instrumentation staging and routing</li>
-                <li>Ops support during pressurization</li>
-              </ul>
-            </div>
-          </article>
+        <div class="overview-content">
+          <div>
+            <h3 class="overview-heading">Scope</h3>
+            <p class="overview-text">
+              Work spanned two efforts: a student-built <strong>solid rocket motor</strong> (R-class) and a <strong>liquid engine</strong> development test stand (RP-1/LOX subsystems). I supported mechanical build, integration, sensor install, electronics/control bring-up, subsystem checkout, and test execution.
+            </p>
+          </div>
 
-          <!-- Card 2 -->
-          <article class="story-card">
-            <div class="story-image">
-              <!-- Replace with your firing photo -->
-              <img src="images/solid-static-fire.jpg" alt="Solid motor static fire">
-            </div>
-            <div class="story-content">
-              <h3>
-                <i data-lucide="radio-tower"></i>
-                <span>Field Testing</span>
-              </h3>
-              <p>
-                Participated in field operations for motor checkout and test runs, supporting procedures, comms, and safety perimeters.
-              </p>
-              <ul class="story-bullets">
-                <li>Range setup and countdown flow</li>
-                <li>Ground safety and comms</li>
-                <li>Post-test inspection</li>
-              </ul>
-            </div>
-          </article>
+          <div>
+            <h3 class="overview-heading">My Focus Areas</h3>
+            <p class="overview-text">
+              <strong>Solid:</strong> assembly &amp; integration, proof-pressure fixture setup, test-day operations, post-test failure assessment.<br/>
+              <strong>Liquid:</strong> plumbing and hardware build (RP-1/LOX), injector &amp; nozzle assembly, sensor installation, control electronics, and system integration on the stand.
+            </p>
+          </div>
 
-          <!-- Card 3 (Failure story) -->
-          <article class="story-card emphasis">
-            <div class="story-image">
-              <!-- Replace with your failure photo(s) -->
-              <img src="images/solid-failure.jpg" alt="Catastrophic failure sequence">
+          <div class="tech-stack">
+            <h3 class="tech-stack-title">Technologies &amp; Tools</h3>
+            <div class="tech-tags">
+              <span class="tech-tag">Integration &amp; Test</span>
+              <span class="tech-tag">Sensors &amp; DAQ</span>
+              <span class="tech-tag">Manufacturing &amp; Tooling</span>
+              <span class="tech-tag">Solid Motor Build</span>
+              <span class="tech-tag">RP-1/LOX Plumbing</span>
+              <span class="tech-tag">CAD</span>
+              <span class="tech-tag">Electronics</span>
             </div>
-            <div class="story-content">
-              <h3>
-                <i data-lucide="alert-triangle"></i>
-                <span>Failure & Findings</span>
-              </h3>
-              <p>
-                During a subsequent firing, the motor experienced a catastrophic failure. Post-event analysis indicated 
-                <strong>porous propellant</strong> fractured during combustion and obstructed the throat, driving a rapid 
-                over-pressure. The back end separated, the casing was ejected, and partially burned propellant remained at the site.
-              </p>
-              <div class="callout">
-                <i data-lucide="info"></i>
-                <p><strong>What I documented:</strong> failure sequence photos, melted stand components, and debris field. The effort tapered after this event; my role here is represented primarily via imagery and test participation rather than deep design artifacts.</p>
-              </div>
-              <div class="mini-gallery">
-                <img src="images/melted-stand.jpg" alt="Melted stand">
-                <img src="images/casing-debris.jpg" alt="Casing debris">
-                <img src="images/failure-sequence.jpg" alt="Failure sequence">
-              </div>
-            </div>
-          </article>
+          </div>
         </div>
       </div>
-    </section>
 
-    <!-- Liquid Engine Section -->
-    <section id="liquid" class="section">
-      <div class="container">
-        <div class="section-head">
-          <div class="badge">
-            <i data-lucide="rocket"></i>
-            <span>Liquid Engine Development — LOX/RP-1</span>
-          </div>
-          <h2>Integration, Stand Build, Sensors & Tooling</h2>
-          <p class="section-intro">
-            Built up a liquid engine test stand, assembled engine components, installed sensors, and developed tooling for manufacturing. 
-            Supported electrical system testing and on-stand checkout. See also the dedicated <em>Propellant Level Sensor</em> project.
+      <!-- Optional second visual: CAD composite -->
+      <div class="overview-image-container" style="margin-top:1.5rem;">
+        <img src="images/liquid-cad-composite.jpg" alt="CAD of engine with nozzle, injector plate, and stand" class="overview-image" loading="lazy"/>
+        <div class="image-caption">CAD: engine + nozzle + injector plate integrated on the stand</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solid Rocket Motor Story -->
+  <section id="solid" class="section">
+    <div class="container">
+      <h2 class="section-title">Solid Rocket Motor – Build, Test &amp; Failure Story</h2>
+
+      <!-- Story card 1 -->
+      <div class="detail-card">
+        <div class="detail-icon-container">
+          <i data-lucide="construction" class="detail-icon"></i>
+        </div>
+        <div class="detail-content">
+          <h3 class="detail-title">Assembly &amp; Integration</h3>
+          <p class="detail-text">
+            Assisted with building and installing the R-class motor onto the proof-pressure test stand and preparing hardware for the field test. Tasks included fixture setup, fastener checks, and safety preparation.
           </p>
-          <div class="section-actions">
-            <a href="https://jack-huston.github.io/Propellant-Level-Sensor" class="btn">
-              <i data-lucide="gauge"></i>
-              <span>Propellant Level Sensor Page</span>
+          <div class="centered-media">
+            <img src="images/solid-assembly-stand.jpg" alt="Installing motor on proof pressure stand"/>
+            <div class="image-caption">Installing the motor to the stand for proof-pressure testing</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story card 2 -->
+      <div class="detail-card detail-card-reverse">
+        <div class="detail-icon-container">
+          <i data-lucide="alert-triangle" class="detail-icon"></i>
+        </div>
+        <div class="detail-content">
+          <h3 class="detail-title">Test &amp; Catastrophic Failure</h3>
+          <p class="detail-text">
+            During the field firing, porous propellant fractured, obstructed the throat, and caused a rapid pressure rise. The aft end separated; the casing launched upward; partially burnt casings remained at the stand. I captured a sequence of failure photos and post-test damage.
+          </p>
+          <ul class="detail-list">
+            <li>Observed blockage consistent with throat occlusion</li>
+            <li>Melted/failed stand components documented post-test</li>
+            <li>Team analysis attributed root cause to propellant porosity → fracture → blockage → over-pressure</li>
+          </ul>
+          <div class="centered-media">
+            <img src="images/solid-failure-sequence.jpg" alt="Failure sequence of the solid motor test"/>
+            <div class="image-caption">Failure sequence (cropped) and aftermath on the stand</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story card 3 -->
+      <div class="detail-card">
+        <div class="detail-icon-container">
+          <i data-lucide="clipboard-check" class="detail-icon"></i>
+        </div>
+        <div class="detail-content">
+          <h3 class="detail-title">Outcome</h3>
+          <p class="detail-text">
+            Work on the solid motor tapered after the incident. While I don’t have much additional technical data to publish publicly, the experience was formative for safety, readiness, and pre-fire inspection discipline.
+          </p>
+          <div class="centered-media">
+            <img src="images/solid-stand-melted.jpg" alt="Melted test stand after failure"/>
+            <div class="image-caption">Post-test: melted stand members and hardware</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Liquid Engine Development -->
+  <section id="liquid" class="section section-white">
+    <div class="container">
+      <h2 class="section-title">Liquid Engine Development – Stand Build &amp; Integration</h2>
+
+      <div class="specs-grid">
+        <div class="spec-card">
+          <div class="spec-header"><i data-lucide="beaker"></i><h3>Propellants</h3></div>
+          <div class="spec-content">
+            <p><strong>Fuel:</strong> RP-1 subsystem build</p>
+            <p><strong>Oxidizer:</strong> LOX plumbing and interfaces</p>
+            <p><strong>Flow Tests:</strong> Water flow for injector patterning</p>
+          </div>
+        </div>
+
+        <div class="spec-card">
+          <div class="spec-header"><i data-lucide="settings"></i><h3>Hardware</h3></div>
+          <div class="spec-content">
+            <p><strong>Injector &amp; Nozzle:</strong> Assembly and fit-up</p>
+            <p><strong>Stand:</strong> Engine integration, mounting, access</p>
+            <p><strong>Tooling:</strong> Built jigs/fixtures for component manufacturing</p>
+          </div>
+        </div>
+
+        <div class="spec-card">
+          <div class="spec-header"><i data-lucide="activity"></i><h3>Sensing</h3></div>
+          <div class="spec-content">
+            <p><strong>Instrumentation:</strong> Pressure, temperature, flow (as available)</p>
+            <p><strong>Install:</strong> Sensor mounting and routing</p>
+            <p><strong>Checkout:</strong> Functional checks and leak checks</p>
+          </div>
+        </div>
+
+        <div class="spec-card">
+          <div class="spec-header"><i data-lucide="cpu"></i><h3>Electronics</h3></div>
+          <div class="spec-content">
+            <p><strong>Controls:</strong> Control electronics build-up</p>
+            <p><strong>Wiring:</strong> Harness routing and labeling</p>
+            <p><strong>Bring-Up:</strong> Power-on test &amp; I/O verification</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail-card">
+        <div class="detail-icon-container">
+          <i data-lucide="flame" class="detail-icon"></i>
+        </div>
+        <div class="detail-content">
+          <h3 class="detail-title">Test Stand &amp; Injector Work</h3>
+          <p class="detail-text">
+            Integrated engine components onto the stand, verified plumbing, and performed water flow tests to visualize injector spray patterning prior to any hot-fire operations.
+          </p>
+
+          <div class="overview-grid" style="margin-top:1rem;">
+            <div class="overview-image-container">
+              <img src="images/injector-plate.jpg" alt="Injector plate close-up" class="overview-image" loading="lazy"/>
+              <div class="image-caption">Injector plate – pre-install inspection</div>
+            </div>
+            <div class="overview-image-container">
+              <img src="images/stand-integration.jpg" alt="Engine integrated on the stand" class="overview-image" loading="lazy"/>
+              <div class="image-caption">Engine integrated on the stand with lines and sensors routed</div>
+            </div>
+          </div>
+
+          <div class="project-links-simple" style="margin-top:1rem;">
+            <a href="https://jack-huston.github.io/Propellant-Level-Sensor" class="link-details">
+              <i data-lucide="gauge"></i><span>See: LOX/RP-1 Propellant Level Sensor (separate page)</span>
               <i data-lucide="arrow-right"></i>
             </a>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Quick badges -->
-        <div class="badge-row">
-          <div class="chip"><i data-lucide="wrench"></i><span>Propulsion Integration & Test</span></div>
-          <div class="chip"><i data-lucide="thermometer"></i><span>Cryogenics & Sensors</span></div>
-          <div class="chip"><i data-lucide="hammer"></i><span>Tooling & Manufacturing</span></div>
-          <div class="chip"><i data-lucide="cpu"></i><span>Control Electronics</span></div>
+  <!-- Gallery -->
+  <section id="gallery" class="section">
+    <div class="container-wide">
+      <h2 class="section-title">Project Gallery</h2>
+      <div class="gallery-grid">
+        <!-- Replace all placeholders with your real images -->
+        <div class="gallery-item">
+          <img src="images/solid-field-test.jpg" alt="Solid motor field test"/>
+          <div class="gallery-caption">Solid motor field setup</div>
         </div>
-
-        <!-- Cards -->
-        <div class="card-grid">
-          <article class="project-card">
-            <div class="project-image">
-              <img src="images/injector-waterflow.jpg" alt="Injector water flow test">
-            </div>
-            <div class="project-badge-header">
-              <i data-lucide="droplets"></i>
-              <span>Injector Flow Testing</span>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Pattern & Leakage Checks</h3>
-              <p class="project-description">
-                Conducted water flow testing on the injector to visualize spray pattern, verify orifice performance, 
-                and check joints/seals prior to cryogenic operations.
-              </p>
-              <div class="project-tags">
-                <span class="tag">Assembly</span>
-                <span class="tag">Instrumentation</span>
-                <span class="tag">Validation</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-image">
-              <img src="images/engine-cad-nozzle.jpg" alt="Liquid engine CAD with nozzle">
-            </div>
-            <div class="project-badge-header">
-              <i data-lucide="atom"></i>
-              <span>CAD & Configuration</span>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Engine Assembly with Nozzle</h3>
-              <p class="project-description">
-                Assisted with configuration and mechanical build-up of the engine assembly, including injector, 
-                chamber, and nozzle integration steps.
-              </p>
-              <div class="project-tags">
-                <span class="tag">Assembly</span>
-                <span class="tag">Configuration Mgmt</span>
-                <span class="tag">Fit-Checks</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-image">
-              <img src="images/injector-plate.jpg" alt="Injector plate">
-            </div>
-            <div class="project-badge-header">
-              <i data-lucide="hammer"></i>
-              <span>Tooling & Fabrication</span>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Injector Plate & Fixtures</h3>
-              <p class="project-description">
-                Built tooling/fixtures to aid manufacturing and repeatable assembly, supporting faster iteration 
-                and consistent alignment during integration.
-              </p>
-              <div class="project-tags">
-                <span class="tag">Manufacturing</span>
-                <span class="tag">Tooling</span>
-                <span class="tag">Quality</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-image">
-              <img src="images/test-stand-assembled.jpg" alt="Liquid engine test stand with injector installed">
-            </div>
-            <div class="project-badge-header">
-              <i data-lucide="rocket"></i>
-              <span>Stand Integration</span>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Full Stand Build & Checkout</h3>
-              <p class="project-description">
-                Integrated mechanical, fluid, and electrical subsystems on the test stand. Performed 
-                harness routing, sensor bring-up, and electronics testing before operations.
-              </p>
-              <div class="project-tags">
-                <span class="tag">I&T</span>
-                <span class="tag">Sensors</span>
-                <span class="tag">Electronics</span>
-              </div>
-            </div>
-          </article>
+        <div class="gallery-item">
+          <img src="images/failure-midframe.jpg" alt="Midframe of catastrophic failure"/>
+          <div class="gallery-caption">Failure mid-frame capture</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/stand-damage.jpg" alt="Melted test stand hardware"/>
+          <div class="gallery-caption">Melted stand hardware</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/liquid-plumbing.jpg" alt="RP-1/LOX plumbing lines on stand"/>
+          <div class="gallery-caption">RP-1/LOX plumbing on stand</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/injector-flow.jpg" alt="Injector water flow test"/>
+          <div class="gallery-caption">Injector water flow test</div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/liquid-cad.jpg" alt="CAD of engine and nozzle"/>
+          <div class="gallery-caption">CAD of engine + nozzle</div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Mixed Gallery -->
-    <section id="gallery" class="section section-alt">
-      <div class="container">
-        <div class="section-head compact">
-          <div class="badge">
-            <i data-lucide="images"></i>
-            <span>Photo Highlights</span>
-          </div>
-          <h2>SRL Gallery</h2>
-        </div>
-
-        <!-- Replace with your preferred thumbnails -->
-        <div class="gallery-grid">
-          <img src="images/thumb-01.jpg" alt="SRL image 1">
-          <img src="images/thumb-02.jpg" alt="SRL image 2">
-          <img src="images/thumb-03.jpg" alt="SRL image 3">
-          <img src="images/thumb-04.jpg" alt="SRL image 4">
-          <img src="images/thumb-05.jpg" alt="SRL image 5">
-          <img src="images/thumb-06.jpg" alt="SRL image 6">
-          <img src="images/thumb-07.jpg" alt="SRL image 7">
-          <img src="images/thumb-08.jpg" alt="SRL image 8">
-          <img src="images/thumb-09.jpg" alt="SRL image 9">
-          <img src="images/thumb-10.jpg" alt="SRL image 10">
-          <img src="images/thumb-11.jpg" alt="SRL image 11">
-          <img src="images/thumb-12.jpg" alt="SRL image 12">
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>&copy; 2025 Carissa Mayo • CU Boulder SRL</p>
-      <div class="footer-actions">
-        <a href="mailto:carissasmayo@gmail.com" class="btn btn-ghost">
-          <i data-lucide="mail"></i><span>Email</span>
+  <!-- Call to Action -->
+  <section class="section cta-section">
+    <div class="container">
+      <h2 class="cta-title">Want to talk SRL propulsion?</h2>
+      <p class="cta-text">Happy to share more about the work, lessons learned, and where I’d like to take propulsion next.</p>
+      <div class="cta-buttons">
+        <a href="mailto:jackthuston1@gmail.com" class="btn-cta-primary">
+          <i data-lucide="mail"></i><span>Get in Touch</span>
         </a>
-        <a href="https://github.com/Carissa-Mayo" class="btn btn-ghost">
-          <i data-lucide="github"></i><span>GitHub</span>
+        <a href="https://jack-huston.github.io/#projects" class="btn-cta-secondary">
+          <i data-lucide="arrow-left"></i><span>View Other Projects</span>
         </a>
       </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <span>© 2025 Jack Huston.</span>
+      <i data-lucide="rocket" class="icon-footer"></i>
+      <span>Learning fast, testing safely.</span>
     </div>
   </footer>
 
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      if (window.lucide) lucide.createIcons();
+    // Icons
+    lucide.createIcons();
+
+    // Mobile menu
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    const closeIcon = document.getElementById('closeIcon');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+      const open = mobileMenu.classList.contains('active');
+      menuIcon.style.display = open ? 'none' : 'block';
+      closeIcon.style.display = open ? 'block' : 'none';
     });
+
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        menuIcon.style.display = 'block';
+        closeIcon.style.display = 'none';
+      });
+    });
+
+    // Navbar background on scroll
+    window.addEventListener('scroll', () => {
+      const navbar = document.querySelector('.navbar');
+      navbar.style.backgroundColor = window.scrollY > 50
+        ? 'rgba(255, 255, 255, 0.98)'
+        : 'rgba(255, 255, 255, 0.95)';
+    });
+
+    // Fix any race conditions with icon replacement
+    setTimeout(() => lucide.createIcons(), 100);
   </script>
 </body>
 </html>
