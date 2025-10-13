@@ -51,7 +51,7 @@
       </div>
       <h1 class="project-hero-title">CU Boulder – Sounding Rocket Lab</h1>
       <p class="project-hero-subtitle">
-        Hands-on propulsion work across a student-built solid rocket motor and a liquid engine test stand. Roles included assembly, integration, electronics, sensor installation, and test operations.
+        Hands-on propulsion work across a student-built solid rocket motor and a liquid engine & associated test stand. Roles included assembly, integration, electronics, sensor installation, and test operations.
       </p>
       <div class="project-meta">
         <div class="meta-item"><i data-lucide="calendar"></i><span>2020–2022</span></div>
@@ -81,7 +81,7 @@
           <div>
             <h3 class="overview-heading">Scope</h3>
             <p class="overview-text">
-              Work spanned two efforts: a student-built <strong>solid rocket motor</strong> (R-class) and a <strong>liquid engine</strong> development test stand (RP-1/LOX subsystems). I supported mechanical build, integration, sensor install, electronics/control bring-up, subsystem checkout, and test execution.
+              Work spanned two efforts: a student-built <strong>solid rocket motor</strong> (R-class) and a <strong>liquid engine</strong> development test stand (RP-1/LOX subsystems). I supported mechanical build, integration, sensor install, electronics/control system assembly, subsystem checkout, and test execution.
             </p>
           </div>
 
@@ -102,7 +102,14 @@
               <span class="tech-tag">Solid Motor Build</span>
               <span class="tech-tag">RP-1/LOX Plumbing</span>
               <span class="tech-tag">CAD</span>
+              <span class="tech-tag">Structural Analysis</span>
               <span class="tech-tag">Electronics</span>
+              <span class="tech-tag">Machining & Fabrication</span>
+              <span class="tech-tag">Embedded Systems</span>
+              <span class="tech-tag">Harnessing Build</span>
+              <span class="tech-tag">LabVIEW</span>
+              <span class="tech-tag">Simulink</span>
+              <span class="tech-tag">MATLAB</span>
             </div>
           </div>
         </div>
@@ -118,7 +125,7 @@
   <!-- Solid Rocket Motor Story -->
   <section id="solid" class="section">
     <div class="container">
-      <h2 class="section-title">Solid Rocket Motor – Build, Test &amp; Failure Story</h2>
+      <h2 class="section-title">Solid Rocket Motor – Build, Test &amp; Failure</h2>
 
       <!-- Assembly & Integration -->
       <div class="detail-card">
@@ -128,7 +135,7 @@
         <div class="detail-content">
           <h3 class="detail-title">Assembly &amp; Integration</h3>
           <p class="detail-text">
-            Helped build and install the R-class motor on the proof-pressure stand and prepared hardware for the field test.
+            Helped with the build and install of the R-class motor on the proof-pressure stand and prepared hardware for the field static fire test.
           </p>
           <div class="centered-media">
             <img src="images/solid-assembly-stand.jpg" alt="Installing motor on proof pressure stand"/>
@@ -145,11 +152,11 @@
         <div class="detail-content">
           <h3 class="detail-title">Test &amp; Catastrophic Failure</h3>
           <p class="detail-text">
-            During the field firing, porous propellant fractured, obstructed the throat, and caused a rapid pressure rise. The aft end separated; the casing launched upward; partially burnt casings remained at the stand. I captured a sequence of failure photos and post-test damage.
+            During the static fire test, porous propellant fractured, chunks of propellant obstructed the throat, which resulted in a rapid pressure rise. The aft end of the motor separated as the pressure exceeded burst pressure; the casing launched upward; partially burnt casings remained at the stand.
           </p>
           <ul class="detail-list">
-            <li>Observed blockage consistent with throat occlusion</li>
-            <li>Melted/failed stand components documented post-test</li>
+            <li>Observed grain chunks exiting nozzle consistent with fracturing resulting in throat occlusion</li>
+            <li>Melted/failed stand components resulted in difficult failure analysis post-test</li>
             <li>Root cause: propellant porosity → fracture → blockage → over-pressure</li>
           </ul>
           <div class="centered-media">
@@ -167,11 +174,19 @@
         <div class="detail-content">
           <h3 class="detail-title">Outcome</h3>
           <p class="detail-text">
-            Work on the solid motor tapered after the incident. While there isn’t much additional public technical data, the experience was formative for safety culture and pre-fire readiness.
+            Following the explosion, work focused on firings of smaller solid motors to develope the propellant, grain structures, and nozzle development to prevent burn-through. This work continued following my time on the team, but culminated in a successful launch of the "Mamba" rocket flying on a Q-class motor, which broke the record for highest thrust SRM produced by a student team.
           </p>
           <div class="centered-media">
-            <img src="images/solid-stand-melted.jpg" alt="Melted test stand after failure"/>
-            <div class="image-caption">Post-test: melted stand members and hardware</div>
+            <img src="images/smaller grain.jpg" alt="Melted test stand after failure"/>
+            <div class="image-caption">Smaller grain firing</div>
+          </div>
+          <div class="centered-media">
+            <img src="images/mamba motor firing.jpg" alt="Melted test stand after failure"/>
+            <div class="image-caption">Static fire of mamba motor</div>
+          </div>
+        <div class="centered-media">
+            <img src="images/mamba flight.jpg" alt="Melted test stand after failure"/>
+            <div class="image-caption">Mamba flight image</div>
           </div>
         </div>
       </div>
@@ -188,9 +203,8 @@
         <div class="spec-card">
           <div class="spec-header"><i data-lucide="beaker"></i><h3>Propellants</h3></div>
           <div class="spec-content">
-            <p><strong>Fuel:</strong> RP-1 subsystem build</p>
-            <p><strong>Oxidizer:</strong> LOX plumbing &amp; interfaces</p>
-            <p><strong>Flow Tests:</strong> Water flow for injector patterning</p>
+            <p><strong>Fuel:</strong> RP-1</p>
+            <p><strong>Oxidizer:</strong> Liquid Oxygen</p>
           </div>
         </div>
 
@@ -206,9 +220,9 @@
         <div class="spec-card">
           <div class="spec-header"><i data-lucide="activity"></i><h3>Sensing</h3></div>
           <div class="spec-content">
-            <p><strong>Instrumentation:</strong> Pressure, temperature, flow (as available)</p>
-            <p><strong>Install:</strong> Sensor mounting &amp; routing</p>
-            <p><strong>Checkout:</strong> Functional &amp; leak checks</p>
+            <p><strong>Instrumentation:</strong> Pressure, temperature, flowrate</p>
+            <p><strong>Install:</strong> Sensor mounting &amp; wire &amp; tube routing</p>
+            <p><strong>Checkout:</strong> Functional check &amp; leak checks</p>
           </div>
         </div>
 
@@ -230,7 +244,7 @@
         <div class="detail-content">
           <h3 class="detail-title">Test Stand Work – Integration &amp; Checkout</h3>
           <p class="detail-text">
-            Integrated engine components onto the stand, routed RP-1/LOX lines, installed sensors, and brought up the control electronics. Performed water flow runs for system validation before any hot-fire operations.
+            Integrated engine components onto the stand, routed RP-1/LOX lines, installed sensors, and brought up the control electronics. Performed water flow runs for system validation.
           </p>
           <div class="overview-grid" style="margin-top:1rem;">
             <div class="overview-image-container">
@@ -253,7 +267,7 @@
         <div class="detail-content">
           <h3 class="detail-title">Injector / Engine Design Work</h3>
           <p class="detail-text">
-            Supported injector and engine design activities including plate inspection and fit-up with the nozzle, CAD reviews, and water-flow visualization to assess spray patterning and symmetry.
+            Supported injector and engine design activities plate manufacturing &amp; fit-up with the nozzle, CAD reviews, and water-flow visualization to assess spray patterning and symmetry.
           </p>
           <div class="overview-grid" style="margin-top:1rem;">
             <div class="overview-image-container">
