@@ -29,7 +29,6 @@
         <a href="#overview" class="nav-link">Overview</a>
         <a href="#solid" class="nav-link">Solid Motor Story</a>
         <a href="#liquid" class="nav-link">Liquid Engine</a>
-        <a href="#gallery" class="nav-link">Gallery</a>
       </div>
     </div>
   </nav>
@@ -39,7 +38,6 @@
     <a href="#overview" class="mobile-link">Overview</a>
     <a href="#solid" class="mobile-link">Solid Motor Story</a>
     <a href="#liquid" class="mobile-link">Liquid Engine</a>
-    <a href="#gallery" class="mobile-link">Gallery</a>
   </div>
 
   <!-- Hero -->
@@ -115,11 +113,7 @@
         </div>
       </div>
 
-      <!-- CENTERED image under overview (Liquid_Engine_Test_Assembly) -->
-      <div class="overview-image-container" style="margin-top:1.5rem;">
-        <img src="Liquid_Engine_Test_Assembly.jpg" alt="CAD of injector, nozzle, tanks, and plumbing on a test stand" class="overview-image" loading="lazy"/>
-        <div class="image-caption">CAD assembly: injector, nozzle, pressurant &amp; propellant tanks, and plumbing on the stand</div>
-      </div>
+      <!-- Removed the CAD assembly image block per your request -->
     </div>
   </section>
 
@@ -135,12 +129,20 @@
         </div>
         <div class="detail-content">
           <h3 class="detail-title">Assembly &amp; Integration</h3>
-          <p class="detail-text">
-            Helped with the build and install of the R-class motor on the proof-pressure stand and prepared hardware for the field static fire test.
-          </p>
-          <div class="centered-media">
-            <img src="r-motor-proof-testing.jpg" alt="SRL team installing the R-class motor for proof pressure testing"/>
-            <div class="image-caption">Installing the R-class motor in its stand for proof-pressure testing</div>
+          <div style="display:grid; gap:1rem; align-items:start; margin-top:.25rem; grid-template-columns:1fr; }
+               @media (min-width:768px){ }">
+            <div style="display:grid; gap:.75rem;">
+              <p class="detail-text" style="margin:0;">
+                Helped with the build and install of the R-class motor on the proof-pressure stand and prepared hardware for the field static fire test.
+              </p>
+              <p class="detail-text" style="margin:0;">
+                I collaborated across mechanical and test subteams to coordinate stand fit checks, plumbing clearances, and instrumentation routing prior to rollout.
+              </p>
+            </div>
+            <div class="centered-media" style="margin-top:.5rem;">
+              <img src="r-motor-proof-testing.jpg" alt="SRL team installing the R-class motor for proof pressure testing" style="max-width:520px;width:100%;height:auto;"/>
+              <div class="image-caption">Installing the R-class motor in its stand for proof-pressure testing</div>
+            </div>
           </div>
         </div>
       </div>
@@ -165,7 +167,9 @@
             <div class="image-caption">Failure sequence: nominal burn → throat blockage → over-pressure separation → aftermath</div>
           </div>
           <div class="centered-media">
-            <img src="post-failure-images.jpg" alt="Team gathered around the melted test stand with aluminum oxide residue"/>
+            <!-- limit portrait scale on desktop -->
+            <img src="post-failure-images.jpg" alt="Team gathered around the melted test stand with aluminum oxide residue"
+                 style="max-width:680px;width:100%;height:auto;"/>
             <div class="image-caption">Aftermath at the stand: melted hardware and aluminum oxide residue</div>
           </div>
         </div>
@@ -181,17 +185,18 @@
           <p class="detail-text">
             Following the explosion, work focused on firings of smaller solid motors to develope the propellant, grain structures, and nozzle development to prevent burn-through. This work continued following my time on the team, but culminated in a successful launch of the "Mamba" rocket flying on a Q-class motor, which broke the record for highest thrust SRM produced by a student team.
           </p>
-          <div class="centered-media">
-            <img src="smaller-engine-testing.png" alt="Development firing of smaller solid motor"/>
-            <div class="image-caption">Smaller development motor firing</div>
-          </div>
-          <div class="centered-media">
-            <img src="mamba-static-fire-close-up.jpg" alt="Q-class motor static fire close-up"/>
-            <div class="image-caption">Q-class motor static fire (post-period)</div>
-          </div>
-          <div class="centered-media">
-            <img src="mamba-launch.jpg" alt="Launch of the Mamba rocket on Q-class motor"/>
-            <div class="image-caption">Mamba launch (post-period)</div>
+          <!-- side-by-side portraits so each is half-width -->
+          <div style="display:grid;grid-template-columns:1fr;gap:1rem;margin-top:.5rem;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+              <div class="centered-media" style="margin:0;">
+                <img src="smaller-engine-testing.png" alt="Development firing of smaller solid motor" style="width:100%;height:auto;"/>
+                <div class="image-caption">Smaller development motor firing</div>
+              </div>
+              <div class="centered-media" style="margin:0;">
+                <img src="mamba-launch.jpg" alt="Launch of the Mamba rocket on Q-class motor" style="width:100%;height:auto;"/>
+                <div class="image-caption">Mamba launch (post-period)</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -268,7 +273,7 @@
             </div>
           </div>
 
-          <!-- Moved & centered propellant level sensor link -->
+          <!-- Centered propellant level sensor link (moved here) -->
           <div class="centered-media" style="margin-top:1rem;">
             <a href="https://jack-huston.github.io/Propellant-Level-Sensor" class="link-details">
               <i data-lucide="gauge"></i><span>See: LOX/RP-1 Propellant Level Sensor (separate page)</span>
@@ -290,61 +295,30 @@
           </p>
 
           <div class="overview-grid" style="margin-top:1rem;">
-            <!-- 1 -->
             <div class="overview-image-container">
               <img src="nozzle-cross-section.png" alt="CAD of full injector and nozzle cross-section" class="overview-image" loading="lazy"/>
               <div class="image-caption">Injector + nozzle CAD cross-section</div>
             </div>
-            <!-- 2 -->
             <div class="overview-image-container">
               <img src="injector-quarter-section.png" alt="Quarter section of injector plate showing internal flow passages" class="overview-image" loading="lazy"/>
               <div class="image-caption">Injector quarter section highlighting internal passages</div>
             </div>
-            <!-- 3 -->
             <div class="overview-image-container">
               <img src="injector-machining-2.jpg" alt="CNC probing of injector plate prior to face milling" class="overview-image" loading="lazy"/>
               <div class="image-caption">CNC probing before face milling of injector surface</div>
             </div>
-            <!-- 4 -->
             <div class="overview-image-container">
               <img src="injector-machining.jpg" alt="Manual mill drilling a nozzle pin hole in the injector" class="overview-image" loading="lazy"/>
               <div class="image-caption">Manual mill drilling a nozzle pin hole</div>
             </div>
           </div>
-
-          <!-- (Button removed from here per your request) -->
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- Gallery (4 coolest images from your list) -->
-  <section id="gallery" class="section">
-    <div class="container-wide">
-      <h2 class="section-title">Project Gallery</h2>
-      <div class="gallery-grid">
-        <div class="gallery-item">
-          <img src="failure-sequence.jpg" alt="Four-panel failure sequence of the solid motor test" loading="lazy">
-          <div class="gallery-caption">Solid motor failure sequence</div>
-        </div>
-        <div class="gallery-item">
-          <img src="test-stand-image.jpg" alt="Liquid engine test stand with injector and tanks" loading="lazy">
-          <div class="gallery-caption">Liquid engine test stand</div>
-        </div>
-        <div class="gallery-item">
-          <img src="nozzle-cross-section.png" alt="CAD cross-section of injector and nozzle" loading="lazy">
-          <div class="gallery-caption">Injector + nozzle CAD</div>
-        </div>
-        <div class="gallery-item">
-          <img src="mamba-launch.jpg" alt="Launch of the Mamba rocket" loading="lazy">
-          <div class="gallery-caption">Mamba launch</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Call to Action (EXACT match to your reference) -->
+  <!-- CTA (unchanged, exact to reference) -->
   <section class="section cta-section">
     <div class="container">
       <h2 class="cta-title">Interested in Learning More?</h2>
@@ -362,7 +336,7 @@
     </div>
   </section>
 
-  <!-- Footer (EXACT match to your reference) -->
+  <!-- Footer (unchanged, exact to reference) -->
   <footer class="footer">
     <div class="footer-content">
       <span>© 2025 Jack Huston.</span>
