@@ -118,7 +118,7 @@ body{
   font-size:.88rem;color:var(--orange-700);font-weight:700;
 }
 
-/* Detail cards (story blocks) */
+/* Detail cards */
 .detail-card{
   display:grid;gap:1.25rem;margin-bottom:1.25rem;padding:1.5rem;background:white;border-radius:1rem;
   border:2px solid var(--orange-100);box-shadow:0 4px 12px rgba(0,0,0,.08);
@@ -143,7 +143,7 @@ body{
 .centered-media img{max-width:100%;height:auto;border-radius:.75rem;box-shadow:0 8px 20px rgba(0,0,0,.08);}
 .centered-media .image-caption{margin-top:.45rem;color:var(--slate-500);font-size:.88rem;}
 
-/* Specs (Liquid) */
+/* Specs */
 .specs-grid{display:grid;gap:1rem;margin-bottom:1.5rem;}
 @media (min-width:640px){.specs-grid{grid-template-columns:repeat(2,1fr);}}
 @media (min-width:1024px){.specs-grid{grid-template-columns:repeat(4,1fr);}}
@@ -155,7 +155,7 @@ body{
 .spec-content p{margin-bottom:.35rem;color:var(--slate-600);font-size:.95rem;}
 .spec-content strong{color:var(--slate-800);}
 
-/* Simple project link row */
+/* Simple link pill */
 .project-links-simple{display:flex;gap:1rem;flex-wrap:wrap;}
 .link-details{
   display:inline-flex;align-items:center;gap:.5rem;padding:.65rem 1rem;border-radius:.75rem;
