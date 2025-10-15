@@ -88,11 +88,9 @@
             <p class="overview-text">
               <strong class="text-blue">Solid:</strong> assembly &amp; integration, proof-pressure setup, field operations, post-test failure documentation.<br/>
               <strong class="text-blue">Liquid:</strong> RP-1/LOX plumbing and hardware build, injector &amp; nozzle assembly,
-              <strong class="text-orange">
-                <a class="inline-link-orange" href="https://jack-huston.github.io/Propellant-Level-Sensor/" target="_blank" rel="noopener noreferrer">
-                  <i data-lucide="external-link"></i><span>capacitive sensor build</span>
-                </a>
-              </strong>,
+              <a class="text-orange" href="https://jack-huston.github.io/Propellant-Level-Sensor/" target="_blank" rel="noopener noreferrer">
+                capacitive sensor build <i data-lucide="external-link" style="width:14px;height:14px;vertical-align:-2px;"></i>
+              </a>,
               sensor installation, control electronics, and full stand integration.
             </p>
           </div>
@@ -268,7 +266,16 @@
           <p class="detail-text">
             Integrated engine components onto the stand, routed RP-1/LOX lines, installed sensors, and brought up the control electronics. Performed water flow runs for system validation.
           </p>
+
+          <!-- Grid with full-width video on top, two images below -->
           <div class="overview-grid" style="margin-top:1rem;">
+            <!-- Full-width video spanning both columns -->
+            <div class="overview-image-container" style="grid-column: 1 / -1;">
+              <video class="overview-image" src="injector-testing.mp4" autoplay loop muted playsinline preload="metadata"></video>
+              <div class="image-caption">Water flow test of the injector installed on the test stand</div>
+            </div>
+
+            <!-- Two images below -->
             <div class="overview-image-container">
               <img src="injector-close-up.jpg" alt="Close-up of injector installed with routed lines and sensor wiring" class="overview-image" loading="lazy"/>
               <div class="image-caption">Injector installed on stand; lines and sensor wiring being routed</div>
@@ -277,14 +284,9 @@
               <img src="injector-top-down.jpg" alt="Top-down view showing plumbing routing to injector" class="overview-image" loading="lazy"/>
               <div class="image-caption">Top-down plumbing layout to the injector</div>
             </div>
-            <!-- New water flow test video -->
-            <div class="overview-image-container">
-              <video class="overview-image" src="injector-testing.mp4" autoplay loop muted playsinline preload="metadata"></video>
-              <div class="image-caption">Water flow test of the injector on the stand (no audio)</div>
-            </div>
           </div>
 
-          <!-- Centered propellant level sensor link (moved here) -->
+          <!-- Centered propellant level sensor link -->
           <div class="centered-media" style="margin-top:1rem;">
             <a href="https://jack-huston.github.io/Propellant-Level-Sensor" class="link-details" target="_blank" rel="noopener noreferrer">
               <i data-lucide="gauge"></i><span>See: LOX/RP-1 Propellant Level Sensor (separate page)</span>
@@ -406,7 +408,6 @@
       const subject = 'Website Inquiry — SRL Project Page';
       const body = 'Hi Jack, ';
       const href = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      // Use window.location to trigger the user's default mail client
       window.location.href = href;
     }
 
