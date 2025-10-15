@@ -340,11 +340,12 @@
         I'd be happy to discuss my experience in more detail or explore potential career opportunities.
       </p>
       <div class="contact-links">
-        <!-- 1) Mailto prefilled with subject & body. 2) JS copies email + shows toast before opening. -->
         <a href="https://jack-huston.github.io/#projects" class="btn-cta-secondary">
           <i data-lucide="arrow-left"></i>
           <span>View Other Projects</span>
         </a>
+
+        <!-- Prefilled mailto; JS will copy email & show toast, then open this link -->
         <a
           id="emailLink"
           class="contact-card"
@@ -409,33 +410,32 @@
         : 'rgba(255, 255, 255, 0.95)';
     });
 
-    // --- Email button: mailto w/ subject & body + clipboard copy + toast ---
-    const emailCTA = document.getElementById('emailCTA');
+    // --- Email CTA: copy email + toast + open mail client ---
+    const emailLink = document.getElementById('emailLink');
     const copyToast = document.getElementById('copyToast');
-    const emailAddress = 'jackthuston1@gmail.com';
 
     function showToast() {
       copyToast.classList.add('show');
       setTimeout(() => copyToast.classList.remove('show'), 1800);
     }
 
-    function openMailClient() {
-      const subject = 'Website Inquiry — SRL Project Page';
-      const body = 'Hi Jack, ';
-      const href = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      window.location.href = href;
-    }
+    if (emailLink) {
+      emailLink.addEventListener('click', async (e) => {
+        e.preventDefault();
+        const email = emailLink.dataset.email || 'jackthuston1@gmail.com';
+        const mailtoHref = emailLink.dataset.mailto || emailLink.href;
 
-    emailCTA.addEventListener('click', async (e) => {
-      e.preventDefault();
-      try {
-        await navigator.clipboard.writeText(emailAddress);
-        showToast();
-      } catch (err) {
-        // Clipboard may be blocked; ignore gracefully
-      }
-      openMailClient();
-    });
+        try {
+          await navigator.clipboard.writeText(email);
+          showToast();
+        } catch (err) {
+          // Clipboard might be blocked; continue gracefully
+        }
+
+        // After attempting to copy, open the user's mail client
+        window.location.href = mailtoHref;
+      });
+    }
 
     setTimeout(() => lucide.createIcons(), 100);
   </script>
