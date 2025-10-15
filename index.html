@@ -332,18 +332,33 @@
   </section>
 
   <!-- CTA -->
-  <section class="section cta-section">
-    <div class="container">
-      <h2 class="cta-title">Interested in Learning More?</h2>
-      <p class="cta-text">I'd be happy to discuss this project in detail or explore career opportunities.</p>
-      <div class="cta-buttons">
-        <a href="#" id="emailCTA" class="btn-cta-primary" role="button">
-          <i data-lucide="mail"></i>
-          <span>Get in Touch</span>
-        </a>
+  <section id="contact" class="section contact-section">
+    <div class="contact-glow"></div>
+    <div class="container contact-container">
+      <h2 class="section-title contact-title">Let's Connect</h2>
+      <p class="contact-subtitle">
+        I'd be happy to discuss my experience in more detail or explore potential career opportunities.
+      </p>
+      <div class="contact-links">
+        <!-- 1) Mailto prefilled with subject & body. 2) JS copies email + shows toast before opening. -->
         <a href="https://jack-huston.github.io/#projects" class="btn-cta-secondary">
           <i data-lucide="arrow-left"></i>
           <span>View Other Projects</span>
+        </a>
+        <a
+          id="emailLink"
+          class="contact-card"
+          href="mailto:jackthuston1@gmail.com?subject=Contact%20via%20Portfolio%20Website&body=Hi%20Jack,%0D%0A%0D%0A"
+          data-email="jackthuston1@gmail.com"
+          data-mailto="mailto:jackthuston1@gmail.com?subject=Contact%20via%20Portfolio%20Website&body=Hi%20Jack,%0D%0A%0D%0A"
+        >
+          <i data-lucide="mail" class="icon-contact"></i>
+          <span>Email Me</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/jack-huston/" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <i data-lucide="linkedin" class="icon-contact"></i>
+          <span>LinkedIn</span>
         </a>
       </div>
     </div>
